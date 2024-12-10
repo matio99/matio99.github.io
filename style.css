@@ -1,0 +1,151 @@
+/* Podstawowe style */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+nav {
+    background-color: #444;
+    text-align: center;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+}
+
+nav a:hover {
+    background-color: #555;
+}
+
+.container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Sekcja "O mnie" */
+#o-mnie {
+    margin-bottom: 40px;
+}
+
+#o-mnie img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* Sekcja "Zainteresowania" */
+#zainteresowania ul {
+    list-style-type: none;
+}
+
+#zainteresowania li {
+    margin: 10px 0;
+}
+
+#zainteresowania strong {
+    font-weight: bold;
+}
+
+/* Sekcja "Kontakt" */
+#kontakt ul {
+    list-style-type: none;
+}
+
+#kontakt li {
+    margin: 10px 0;
+}
+
+/* Styl dla linków w kontakcie */
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Stopka */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* Media Queries dla responsywności */
+
+/* Małe ekrany (telefony) */
+@media (max-width: 600px) {
+    nav a {
+        display: block;
+        padding: 15px;
+        margin: 5px 0;
+    }
+
+    #o-mnie img {
+        width: 100%;
+        max-width: none;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    h1, h2 {
+        font-size: 1.5em;
+    }
+}
+
+/* Średnie ekrany (tablety) */
+@media (max-width: 768px) {
+    nav a {
+        padding: 12px;
+        margin: 8px 0;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    #o-mnie img {
+        max-width: 250px;
+    }
+
+    h1, h2 {
+        font-size: 1.75em;
+    }
+}
+
+/* Duże ekrany (komputery stacjonarne) */
+@media (min-width: 1024px) {
+    .container {
+        padding: 30px;
+    }
+
+    #o-mnie img {
+        float: right;
+        margin-left: 20px;
+    }
+}
