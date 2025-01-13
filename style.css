@@ -1,151 +1,124 @@
-/* Podstawowe style */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root {
+    --main-bg: #121212;
+    --secondary-bg: #1e1e1e;
+    --accent-color: #00bcd4;
+    --text-color: #ffffff;
+    --muted-text: #b0b0b0;
+    --card-bg: #242424;
+    --hover-color: #007c91;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--main-bg);
+    color: var(--text-color);
 }
 
 header {
-    background-color: #333;
-    color: white;
     text-align: center;
-    padding: 20px;
+    padding: 2rem 0;
+    background: linear-gradient(45deg, var(--accent-color), var(--hover-color));
+    color: #fff;
 }
 
-nav {
-    background-color: #444;
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    margin: 0.5rem 0 0;
+}
+
+section {
+    padding: 2rem;
+}
+
+#umiejetnosci h2 {
     text-align: center;
-    padding: 10px;
+    color: var(--accent-color);
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 20px;
-    margin: 0 10px;
+#umiejetnosci ol {
+    max-width: 600px;
+    margin: 1rem auto;
+    padding: 0;
+    list-style: decimal inside;
 }
 
-nav a:hover {
-    background-color: #555;
+#umiejetnosci li {
+    background-color: var(--card-bg);
+    margin: 0.5rem 0;
+    padding: 0.8rem;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .container {
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
 }
 
-/* Sekcja "O mnie" */
-#o-mnie {
-    margin-bottom: 40px;
+.card {
+    background-color: var(--card-bg);
+    width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-#o-mnie img {
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
+}
+
+.card img {
     width: 100%;
-    max-width: 300px;
     height: auto;
-    border-radius: 8px;
-    margin-top: 20px;
 }
 
-/* Sekcja "Zainteresowania" */
-#zainteresowania ul {
-    list-style-type: none;
+.card-content {
+    padding: 1rem;
 }
 
-#zainteresowania li {
-    margin: 10px 0;
+.card-content h3 {
+    margin: 0 0 0.5rem;
+    color: var(--accent-color);
 }
 
-#zainteresowania strong {
+.card-content p {
+    margin: 0 0 1rem;
+    color: var(--muted-text);
+}
+
+.card-content a {
+    color: var(--accent-color);
+    text-decoration: none;
     font-weight: bold;
 }
 
-/* Sekcja "Kontakt" */
-#kontakt ul {
-    list-style-type: none;
+.card-content a:hover {
+    color: var(--hover-color);
 }
 
-#kontakt li {
-    margin: 10px 0;
-}
-
-/* Styl dla linków w kontakcie */
-a {
-    text-decoration: none;
-    color: #333;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* Stopka */
 footer {
-    background-color: #333;
-    color: white;
     text-align: center;
-    padding: 20px;
-    margin-top: 40px;
+    padding: 1rem;
+    background-color: var(--secondary-bg);
+    color: var(--muted-text);
+    font-size: 0.9rem;
 }
 
-/* Media Queries dla responsywności */
-
-/* Małe ekrany (telefony) */
-@media (max-width: 600px) {
-    nav a {
-        display: block;
-        padding: 15px;
-        margin: 5px 0;
-    }
-
-    #o-mnie img {
-        width: 100%;
-        max-width: none;
-    }
-
-    .container {
-        padding: 10px;
-    }
-
-    h1, h2 {
-        font-size: 1.5em;
-    }
+footer p {
+    margin: 0;
 }
 
-/* Średnie ekrany (tablety) */
-@media (max-width: 768px) {
-    nav a {
-        padding: 12px;
-        margin: 8px 0;
-    }
 
-    .container {
-        padding: 15px;
-    }
-
-    #o-mnie img {
-        max-width: 250px;
-    }
-
-    h1, h2 {
-        font-size: 1.75em;
-    }
-}
-
-/* Duże ekrany (komputery stacjonarne) */
-@media (min-width: 1024px) {
-    .container {
-        padding: 30px;
-    }
-
-    #o-mnie img {
-        float: right;
-        margin-left: 20px;
-    }
+header h1, #umiejetnosci h2 {
+    text-shadow: 0 0 8px var(--accent-color), 0 0 16px var(--hover-color);
 }
